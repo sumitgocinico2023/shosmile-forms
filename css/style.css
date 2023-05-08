@@ -1,0 +1,780 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x:hidden;
+    background-color: whitesmoke;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    text-decoration: none;
+    color: #000;
+}
+a:focus {
+    outline: none;
+    color: #000;
+}
+h1,h2,h3,h4,h6,p,a{
+    margin: 0;
+    color: #000;
+}
+.btn:focus,
+.btn:hover {
+    outline: none;
+    box-shadow:none;
+}
+.bg-black {
+    background: #000;
+}
+@font-face {
+    font-family: 'Nunito Bold';
+    src: url('../fonts/Nunito/Nunito-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito Regular';
+    src: url('../fonts/Nunito/Nunito-Regular.ttf');
+}
+/* Header Css Start */
+.header-outer {
+    margin-top: 6rem;
+}
+header img{
+    margin: 0 auto;
+    display: block;
+    float: none;
+    width: 135px;
+}
+.header-inner{
+    background: #FDDA44;
+    padding: 30px;
+    border: 3px solid #000000;
+    border-right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.header-inner h1{
+    font-family: 'Nunito Bold';
+    font-size: 38px;
+    line-height: 60px;
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header-inner p{
+    font-family: 'Nunito Regular';
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.header-call-action {
+    position: fixed;
+top: 25px;
+text-align: center;
+margin: 0 auto;
+display: block;
+float: right;
+width: 8%;
+right: 0;
+}
+.header-call-action-div {
+width: 37px;
+background-color: #FDDA44;
+height: 37px;
+border-radius: 50px;
+float: right;
+transition: width 1s;
+overflow: hidden;
+white-space: nowrap;
+margin-right: 10px;
+}
+.header-call-action img {
+margin-top: 0;
+margin-right: 0px;
+transition: transform .7s ease-in-out;
+width: 35px;
+}
+
+.header-call-action-div:hover img {
+transform: rotate(360deg);
+margin-right: 60px;
+}
+.header-call-action-div p {
+display: none;
+text-align: right;
+margin-right: 12px;
+position: relative;
+top: -22px;
+color: #000;
+font-family: 'Nunito Bold';
+}
+.header-call-action-div:hover {
+width: 100%;
+}
+.header-call-action-div:hover p {
+display: block;
+position: relative;
+top: -28px;
+color: #000;
+font-family: 'Nunito Bold';
+}
+/* Header Css End */
+
+
+/* Progress Bar Css Start */
+.progress-div {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+@keyframes bounce {
+	 0% {
+		 transform: scale(1);
+	}
+	 33% {
+		 transform: scale(0.9);
+	}
+	 66% {
+		 transform: scale(1.1);
+	}
+	 100% {
+		 transform: scale(1);
+	}
+}
+.steps {
+	 display: flex;
+	 width: 100%;
+	 margin: 0;
+	 padding: 0 0 2rem 0;
+	 list-style: none;
+}
+.step {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: column;
+	 flex: 1;
+	 position: relative;
+	 pointer-events: none;
+}
+.step--active, .step--complete {
+	 cursor: pointer;
+	 pointer-events: all;
+}
+.step:not(:last-child):before, .step:not(:last-child):after {
+	 display: block;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 height: 1px;
+	 content: '';
+	 transform: translateY(-50%);
+	 will-change: width;
+	 z-index: -1;
+}
+ .step:before {
+	 width: 100%;
+	 background-color: #BFBFBF;
+}
+ .step:after {
+	 width: 0;
+	 background-color: rgba(0, 0, 0, 0.3);
+}
+ .step--complete:after {
+	 width: 100% !important;
+	 opacity: 1;
+	 transition: width 0.6s ease-in-out, opacity 0.6s ease-in-out;
+     background-color: #000;
+}
+ .step__icon {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 position: relative;
+     width: 35px;
+     height: 35px;
+	 background: #000;
+	 border-radius: 50%;
+	 color: transparent;
+	 font-size: 20px;
+     color: #FFFFFF;
+     font-family: 'Nunito Bold';
+}
+
+ .step--complete.step--active .step__icon {
+	 color: #fff;
+	 transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+ .step--complete .step__icon {
+	 animation: bounce 0.5s ease-in-out;
+	 background-color: #FDDA44;
+	 border-color: #FDDA44;
+	 color: #fff;
+}
+ .step__label {
+	 position: absolute;
+	 bottom: -2rem;
+	 left: 50%;
+	 margin-top: 1rem;
+	 font-size: 0.8rem;
+	 text-transform: uppercase;
+	 transform: translateX(-50%);
+}
+.step--incomplete.step--inactive .step__label {
+	 color: #e6e7e8;
+}
+ .step--incomplete.step--active .step__label {
+	 color: #fff;
+}
+ .step--active .step__label {
+	 transition: color 0.3s ease-in-out;
+	 transition-delay: 0.5s;
+}
+/* Progress Bar Css End */
+
+/* Appointment For Section Css Start */
+/* .appointment-for-first {
+    margin-top: 100px;
+    margin-bottom: 150px;
+} */
+.appointment-for-second {
+    margin-top: 3rem;
+     /* margin-bottom: 150px; */
+}
+.appointment-for h2 {
+    font-family: 'Nunito Bold';
+}
+.appointment-for h2::after, .appointment-category-selection h2::after{
+    content: '';
+    background-color: #FDDA44;
+    width: 200px;
+    height: 3px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.appointment-inner {
+    border-radius: 10px;
+    background-color: #FDDA44;
+    text-align: center;
+    padding: 30px;
+    width: 200px;
+    margin: 0 auto;
+}
+.appointment-inner img {
+    width: 80px;
+    height: 80px;
+}
+.appointment-inner h3{
+    margin-top: 25px;
+    font-family: 'Nunito Bold';
+    font-size: 20px;
+    line-height: 12px;
+    color: #000;
+}
+/* Appointment For Section Css End */
+
+/* Choose Location Section Start */
+.appointfor-location{
+    background-color: #FDDA44;
+    padding: 30px;
+    margin-bottom: 3rem;
+}
+.appointfor-location-div {
+    display: flex;
+    align-items: center;
+}
+.appointfor-location-icon {
+    width: 300px;
+}
+.appointfor-location-icon img{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.appointfor-location-icon h3{
+    font-family: 'Nunito Bold';
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.appointfor-location-content {
+    width: 600px;
+    margin-left: 50px;
+    position: relative;
+}
+.appointfor-location-content p {
+    font-size: 23px;
+    font-family: 'Nunito Regular';
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+.appointfor-location-content span {
+    font-size: 18px;
+    font-family: 'Nunito Regular';
+    line-height: 0;
+}
+.appointfor-location-content::before{
+    content: '';
+    width: 3px;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    left: -50px;
+}
+.flex {
+    display: flex;
+}
+.flex.center-v {
+    align-items: center;
+}
+.flex.center-h {
+    justify-content: center;
+}
+.flex.center-vh {
+    align-items: center;
+    justify-content: center;
+}
+.flex.start {
+    justify-content: flex-start;
+}
+.flex.end {
+    justify-content: flex-end;
+}
+.flex.around {
+    justify-content: space-around;
+}
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clickable, #calender-title{
+    cursor: pointer;
+}
+.colorRed {
+    color: #000;
+}
+#calender-wrapper {
+    position: relative;
+    border: 6px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 0px !important;
+}
+
+#calender-title {
+    background: #000;
+    color: white;
+    font-size: 18pt;
+    height: 60px;
+}
+#calender-title div {
+    height: 60px;
+    width: 60px;
+}
+#calender-title p {
+    height: 60px;
+    width: 150px;
+    color: #fff;
+}
+#calender-content {
+    width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+}
+#make-booking {
+    width: 100%;
+    height: 100%;
+    font-size: 20pt;
+    color: white;
+}
+#booking-wrapper {
+    position: absolute;
+    height: 650px;
+    width: 720px;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    margin-top: 150px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+#booking-wrapper.opened {
+    margin-top: -645px;
+}
+#booking-title {
+    color: white;
+    font-size: 30pt;
+    height: 60px;
+    width: 100%;
+}
+
+textarea.formError, input.formError {
+    transition: 0.4s;
+    background: #fdd !important;
+    box-shadow: inset 0px 0px 0px 5px rgba(205, 108, 108, 0.92);
+}
+
+.month {
+   width: 68px;
+   height: 50px;
+    transition: 0.4s;
+}
+#days p {
+   width: 68px;
+   text-align: center;
+   font-size: 15px;
+   font-family: 'Nunito Bold';
+}
+
+.month-selector {
+   font-family: 'Nunito Regular';
+    width: 50px;
+    height: 50px;
+    transition: 0.4s;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.month-selector.clicked {
+    background: #FDDA44;
+    color: white;
+}
+.month-selector.booked {
+    background: #743131;
+    color: white;
+    overflow: hidden;
+}
+.month-selector.booked:after {
+    content: 'X';
+    position: absolute;
+    margin-top: -3px;
+    font-size: 100pt;
+    font-family: "Ubuntu";
+    opacity: 0.1;
+}
+.clickable:hover {
+    z-index: 3;
+    height: 50px;
+   width: 50px;
+    box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.14);
+    background: #000;
+    color: white;
+}
+.clickable:hover p {
+    color: white;
+}
+/* Choose Location Section End */
+
+/* Appointment Category Selection Css Start */
+.appointment-category-selection .appointfor-location-content {
+    display: block;
+}
+.appointment-category-selection .appointfor-location-content h3{
+    font-family: 'Nunito Bold';
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+.appointment-category-selection .appointfor-location-content p{
+    font-family: 'Nunito Bold';
+    font-size: 18px;
+    line-height: 22px;
+}
+/* Appointment Category Selection Css End */
+
+
+/* Book your slot css start */
+.next-icon img {
+    position: relative;
+    width: 35px;
+    right: -47px;
+}
+.book-now {
+    background-color: #FDDA44;
+    padding: 15px;
+    text-align: center;
+    width: 188px;
+}
+.book-now h3 {
+    position: relative;
+    font-family: 'Nunito Bold';
+    font-size: 20px;
+    line-height: 28px;
+}
+.book-now h3::after {
+    content: '';
+    width: 95px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: auto;
+    bottom: -1px;
+    margin: 0 auto;
+    right: 0;
+}
+.book-now h4 {
+    font-family: 'Nunito Bold';
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 4px;
+}
+.book-now-div {
+    display: flex;
+    justify-content: center;
+}
+.book-your-slot .appointfor-location {
+    margin-bottom: 0rem;
+}
+.book-your-slot .appointfor-location-icon {
+    width: 200px;
+}
+.book-your-slot .appointfor-location-content {
+    width: 700px;
+    margin-left: 25px;
+}
+.book-your-slot .appointfor-location-content::before {
+    left: -27px;
+    height: 60px;
+}
+.book-your-slot .appointfor-location-icon img {
+    float: left;
+}
+.book-your-slot .appointfor-location-content h3 {
+    font-family: 'Nunito Bold';
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+.book-your-slot .appointfor-location-content p {
+    font-family: 'Nunito Regular';
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+/* Book your slot css end */
+
+/* Choose date and time css start */
+.choose-date-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.choose-date-content p {
+    color: #FDDA44;
+    font-family: 'Nunito Regular';
+    font-size: 24px;
+    line-height: 30px;
+}
+.choose-date-content p:not(:last-child) {
+    margin-bottom: 30px;
+}
+.choose-date-time h3{
+    font-family: 'Nunito Bold';
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 30px;
+}
+.choose-slot-booking ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 30px;
+}
+.choose-slot-booking ul li button{
+    background-color: #FDDA44;
+    color: #000;
+    font-family: 'Nunito Regular';
+    font-size: 15px;
+    line-height: 0;
+    width: 170px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
+.choose-slot-booking ul li button:hover,.choose-slot-booking ul li button.active{
+    background-color: #000;
+    color: #fff;
+}
+.choose-slot-booking p {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Nunito Bold';
+    font-size: 15px;
+}
+
+/* Choose date and time css end */
+
+/* Enter Your Information css start */
+.booking-outer {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.booking-date {
+    font-size: 100px;
+    font-family: 'Nunito Bold';
+    line-height: 90px;
+    color: #000;
+}
+.booking-month {
+    font-family: 'Nunito Bold';
+    color: #000000;
+    font-size: 28px;
+}
+.booking-time-outer {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 128px;
+    margin: 0 auto;
+}
+.booking-year {
+    font-family: 'Nunito Bold';
+    color: #000000;
+    font-size: 28px;
+}
+.booking-time-outer h3{
+    color: #000;
+    font-size: 35px;
+    font-family: 'Nunito Bold';
+}
+.booking-time-outer h4{
+    color: #000;
+    font-size: 35px;
+    font-family: 'Nunito Bold';
+}
+.booking-date-time-div {
+    margin-top: 50px;
+}
+.booking-date-time-form {
+    margin-top: 50px;
+}
+.form-control:focus {
+    color: #000;
+    background-color: #fff;
+    border-color: #F2C94C;
+    outline: 0;
+    box-shadow: none;
+}
+.form-control {
+    color: #000;
+    background-color: #fff;
+    outline: 0;
+    border:3px solid #F2C94C;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Nunito Bold';
+}
+  .form-control::-webkit-input-placeholder { /* Edge */
+    color: #000;
+    font-family: 'Nunito Bold';
+  }
+  
+  .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000;
+    font-family: 'Nunito Bold';
+  }
+  
+  .form-control::placeholder {
+    color: #000;
+    font-family: 'Nunito Bold';
+  }
+  .booking-submit {
+    background-color: #FDDA44;
+    color: #000;
+    border: none;
+    font-family: 'Nunito Bold';
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 30px;
+    font-size: 22px;
+  }
+  .booking-submit:hover, .booking-submit:active, .booking-submit:focus, .booking-submit:active:focus {
+    background-color: #FDDA44;
+    border: none;
+    color: #000;
+    box-shadow: none;
+  }
+  .booking-submit::before {
+    content: '';
+    background-image: url(../images/submit-icon.png);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-size: cover;
+}
+
+/* Enter Your Information css end */
+
+
+/* Footer Css Start */
+footer {
+    margin-top: 6rem;
+}
+.back-div {
+    border-radius: 10px;
+    background: #FDDA44;
+    width: 168px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.back-div img{
+    width: 39px;
+    height: 39px;
+    margin-right: 20px;
+}
+.back-div h3{
+    font-family: 'Nunito Bold';
+    font-size: 18px;
+    line-height: 25px;
+}
+footer p {
+    font-family: 'Nunito Bold';
+    font-size: 16px;
+}
+.back-div-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-top: 2px solid #000;
+    padding-top: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+.back-div-outer ul {
+    display: flex;
+    column-gap: 15px;
+}
+.back-div-outer ul li img{
+    width: 40px;
+}
+/* Footer Css End */
