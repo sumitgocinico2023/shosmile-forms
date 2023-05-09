@@ -48,11 +48,22 @@ h1,h2,h3,h4,h6,p,a{
 .header-outer {
     margin-top: 6rem;
 }
+.header-outer-div {
+    display: flex;
+    align-items: center;
+}
+.header-logo {
+    width: 60%;
+}
+.header-content {
+    margin-left: -100px;
+}
 header img{
     margin: 0 auto;
     display: block;
     float: none;
-    width: 135px;
+    /* width: 135px; */
+    max-width: none !important;
 }
 .header-inner{
     background: #FDDA44;
@@ -209,7 +220,12 @@ font-family: 'Nunito Bold';
      color: #FFFFFF;
      font-family: 'Nunito Bold';
 }
-
+.big-step {
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
  .step--complete.step--active .step__icon {
 	 color: #fff;
 	 transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -247,6 +263,11 @@ font-family: 'Nunito Bold';
     margin-top: 100px;
     margin-bottom: 150px;
 } */
+.appointment-outer-div {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
 .appointment-for-second {
     margin-top: 3rem;
      /* margin-bottom: 150px; */
@@ -286,10 +307,12 @@ font-family: 'Nunito Bold';
 /* Appointment For Section Css End */
 
 /* Choose Location Section Start */
+.appointfor-location-outer:not(:last-child) {
+    margin-bottom: 3rem;
+}
 .appointfor-location{
     background-color: #FDDA44;
     padding: 30px;
-    margin-bottom: 3rem;
 }
 .appointfor-location-div {
     display: flex;
@@ -331,7 +354,7 @@ font-family: 'Nunito Bold';
 .appointfor-location-content::before{
     content: '';
     width: 3px;
-    height: 100px;
+    height: 100%;
     background-color: #000;
     position: absolute;
     left: -50px;
@@ -496,6 +519,7 @@ textarea.formError, input.formError {
     font-family: 'Nunito Bold';
     font-size: 18px;
     line-height: 22px;
+    min-height: 45px;
 }
 /* Appointment Category Selection Css End */
 
@@ -552,7 +576,7 @@ textarea.formError, input.formError {
 }
 .book-your-slot .appointfor-location-content::before {
     left: -27px;
-    height: 60px;
+    height: 100%;
 }
 .book-your-slot .appointfor-location-icon img {
     float: left;
@@ -562,12 +586,14 @@ textarea.formError, input.formError {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 10px;
+    min-height: 0px;
 }
 .book-your-slot .appointfor-location-content p {
     font-family: 'Nunito Regular';
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 0;
+    min-height: 0;
 }
 /* Book your slot css end */
 

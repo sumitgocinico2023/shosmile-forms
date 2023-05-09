@@ -8,6 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='./css/style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/responsive.css'>
     
 </head>
 <body>
@@ -21,16 +22,14 @@
     </div>
     <header>
         <div class="header-outer">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-xl-1 offset-xl-2">
-                        <img src="./images/Header-logo-transperant.png" class="img-fluid">    
-                    </div>
-                    <div class="offset-xl-1 col-xl-8">
-                        <div class="header-inner">
-                            <h1>Welcome to Shosmile Orthodontics</h1>    
-                            <p>Beverly Hills Office, Smile Health Orthodontics, Dr Deborah Solomon - 436 N Roxbury Dr Suite 203, Beverly Hills, CA 90210, USA</p>
-                        </div>
+            <div class="header-outer-div">
+                <div class="header-logo">
+                    <img src="./images/Header-logo-transperant.png" class="img-fluid">      
+                </div>
+                <div class="header-content">
+                    <div class="header-inner">
+                        <h1>Welcome to Shosmile Orthodontics</h1>    
+                        <p>1 Beverly Hills Office, Smile Health Orthodontics, Dr Deborah Solomon - 436 N Roxbury Dr Suite 203, Beverly Hills, CA 90210, USA</p>
                     </div>
                 </div>
             </div>
@@ -54,6 +53,12 @@
                         <li class="step step--incomplete step--inactive">
                             <span class="step__icon">4</span>
                         </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">5</span>
+                        </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">6</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -70,9 +75,9 @@
             </div>
             <div class="container appointment-for-second">
                 <div class="row align-items-center mb-5">
-                    <div class="col-xl-10 mx-auto">
+                    <div class="col-lg-12 col-xl-10 mx-auto">
                         <div class="row align-items-center">
-                            <div class="col-xl-6 offset-xl-1">
+                            <div class="col-md-8 col-lg-8 col-xl-7">
                                 <div class="appointfor-location">
                                     <div class="appointfor-location-div">
                                         <div class="appointfor-location-icon">
@@ -89,7 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 book-now-div">
+                            <div class="col-md-3 col-lg-3 col-xl-3 book-now-div">
                                 <a href="./choose-date-time.html">
                                     <div class="book-now">
                                         <h3>Book Now</h3>
@@ -101,9 +106,9 @@
                     </div>
                 </div>
                 <div class="row align-items-center mb-5">
-                    <div class="col-xl-10 mx-auto">
+                    <div class="col-lg-12 col-xl-10 mx-auto">
                         <div class="row align-items-center">
-                            <div class="col-xl-6 offset-xl-1">
+                            <div class="col-md-8 col-lg-8 col-xl-7">
                                 <div class="appointfor-location">
                                     <div class="appointfor-location-div">
                                         <div class="appointfor-location-icon">
@@ -119,7 +124,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 book-now-div">
+                            <div class="col-md-3 col-lg-3 col-xl-3 book-now-div">
                                 <a href="./choose-date-time.html">
                                     <div class="book-now">
                                         <h3>Book Now</h3>
@@ -159,5 +164,12 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/custom.js"></script>
+<script>
+    $(".steps li:nth-child(3) .step__icon").removeClass('big-step');
+    $(".steps li:nth-child(4) .step__icon").addClass('big-step');
 
+    $(".steps li:nth-child(1)").addClass('step--complete');
+    $(".steps li:nth-child(2)").addClass('step--complete');
+    $(".steps li:nth-child(3)").addClass('step--complete');
+</script>
 </html>

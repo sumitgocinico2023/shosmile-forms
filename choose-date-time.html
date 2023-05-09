@@ -8,6 +8,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='./css/style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/responsive.css'>
     
 </head>
 <body>
@@ -21,21 +22,48 @@
     </div>
     <header>
         <div class="header-outer">
-            <div class="container-fluid p-0">
-                <div class="row align-items-center">
-                    <div class="col-xl-1 offset-xl-2">
-                        <img src="./images/Header-logo-transperant.png" class="img-fluid">    
-                    </div>
-                    <div class="offset-xl-1 col-xl-8">
-                        <div class="header-inner">
-                            <h1>Welcome to Shosmile Orthodontics</h1>    
-                            <p>Beverly Hills Office, Smile Health Orthodontics, Dr Deborah Solomon - 436 N Roxbury Dr Suite 203, Beverly Hills, CA 90210, USA</p>
-                        </div>
+            <div class="header-outer-div">
+                <div class="header-logo">
+                    <img src="./images/Header-logo-transperant.png" class="img-fluid">      
+                </div>
+                <div class="header-content">
+                    <div class="header-inner">
+                        <h1>Welcome to Shosmile Orthodontics</h1>    
+                        <p>1 Beverly Hills Office, Smile Health Orthodontics, Dr Deborah Solomon - 436 N Roxbury Dr Suite 203, Beverly Hills, CA 90210, USA</p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <section>
+        <div class="progress-div">
+            <div class="container">
+                <div class="row">
+                    <ul class="steps">
+                        <li class="step step--incomplete step--active">
+                            <span class="step__icon">1</span>
+                        </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">2</span>
+                        </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">3</span>
+                        </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">4</span>
+                        </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">5</span>
+                        </li>
+                        <li class="step step--incomplete step--inactive">
+                            <span class="step__icon">6</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <section>
         <div class="bg-black choose-date-content">
@@ -61,7 +89,7 @@
                 <div class="row">
                     <div class="col-xl-10 mx-auto">
                         <div class="row">
-                            <div class="col-xl-6">
+                            <div class="col-md-12 col-lg-6 col-xl-6">
                                 <div class="choose-date-picker">
                                     <h3>Choose a Date</h3>
                                     <div id="calender-wrapper">
@@ -86,7 +114,7 @@
                                     
                                 </div>
                             </div>
-                            <div class="col-xl-5 offset-xl-1">
+                            <div class="col-md-12 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1">
                                 <div class="choose-slot-booking">
                                     <h3>Pick a time</h3>
                                     <ul>
@@ -131,5 +159,13 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/custom.js"></script>
+<script>
+    $(".steps li:nth-child(4) .step__icon").removeClass('big-step');
+    $(".steps li:nth-child(5) .step__icon").addClass('big-step');
 
+    $(".steps li:nth-child(1)").addClass('step--complete');
+    $(".steps li:nth-child(2)").addClass('step--complete');
+    $(".steps li:nth-child(3)").addClass('step--complete');
+    $(".steps li:nth-child(4)").addClass('step--complete');
+</script>
 </html>
