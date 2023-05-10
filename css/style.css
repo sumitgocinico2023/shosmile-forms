@@ -1,9 +1,23 @@
+
+:root {
+    /*  Color Code  */
+    --primary: #FDDA44;
+    --secondary: #000000;
+    --whitesmoke: #f5f5f5;
+    --white-color: #ffffff;
+    --silver-color: #BFBFBF;
+    --cyna-blue-color: #e6e7e8;
+    --border-color: #F2C94C;
+    --bold-font: "Nunito Bold";
+    --Regular-font: "Nunito Regular";
+}
+
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x:hidden;
-    background-color: whitesmoke;
+    background-color: var(--whitesmoke);
 }
 ul {
     margin: 0;
@@ -13,19 +27,19 @@ ul {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--secondary);
 }
 a:hover {
     text-decoration: none;
-    color: #000;
+    color: var(--secondary);
 }
 a:focus {
     outline: none;
-    color: #000;
+    color: var(--secondary);
 }
 h1,h2,h3,h4,h6,p,a{
     margin: 0;
-    color: #000;
+    color: var(--secondary);
 }
 .btn:focus,
 .btn:hover {
@@ -33,7 +47,7 @@ h1,h2,h3,h4,h6,p,a{
     box-shadow:none;
 }
 .bg-black {
-    background: #000;
+    background: var(--secondary);
 }
 @font-face {
     font-family: 'Nunito Bold';
@@ -66,27 +80,27 @@ header img{
     max-width: none !important;
 }
 .header-inner{
-    background: #FDDA44;
+    background: var(--primary);
     padding: 30px;
-    border: 3px solid #000000;
+    border: 3px solid var(--secondary);
     border-right: 0;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 .header-inner h1{
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 38px;
     line-height: 60px;
-    color: #000000;
+    color: var(--secondary);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .header-inner p{
-    font-family: 'Nunito Regular';
+    font-family: var(--Regular-font);
     font-size: 24px;
     line-height: 30px;
     display: flex;
     align-items: center;
-    color: #000000;
+    color: var(--secondary);
 }
 .header-call-action {
     position: fixed;
@@ -100,7 +114,7 @@ right: 0;
 }
 .header-call-action-div {
 width: 37px;
-background-color: #FDDA44;
+background-color: var(--primary);
 height: 37px;
 border-radius: 50px;
 float: right;
@@ -126,8 +140,8 @@ text-align: right;
 margin-right: 12px;
 position: relative;
 top: -22px;
-color: #000;
-font-family: 'Nunito Bold';
+color: var(--secondary);
+font-family: var(--bold-font);
 }
 .header-call-action-div:hover {
 width: 100%;
@@ -136,8 +150,8 @@ width: 100%;
 display: block;
 position: relative;
 top: -28px;
-color: #000;
-font-family: 'Nunito Bold';
+color: var(--secondary);
+font-family: var(--bold-font);
 }
 /* Header Css End */
 
@@ -194,7 +208,7 @@ font-family: 'Nunito Bold';
 }
  .step:before {
 	 width: 100%;
-	 background-color: #BFBFBF;
+	 background-color: var(--silver-color);
 }
  .step:after {
 	 width: 0;
@@ -204,7 +218,7 @@ font-family: 'Nunito Bold';
 	 width: 100% !important;
 	 opacity: 1;
 	 transition: width 0.6s ease-in-out, opacity 0.6s ease-in-out;
-     background-color: #000;
+     background-color: var(--secondary);
 }
  .step__icon {
 	 display: flex;
@@ -213,12 +227,12 @@ font-family: 'Nunito Bold';
 	 position: relative;
      width: 35px;
      height: 35px;
-	 background: #000;
+	 background: var(--secondary);
 	 border-radius: 50%;
 	 color: transparent;
 	 font-size: 20px;
-     color: #FFFFFF;
-     font-family: 'Nunito Bold';
+     color: var(--white-color);
+     font-family: var(--bold-font);
 }
 .big-step {
     width: 55px;
@@ -227,15 +241,15 @@ font-family: 'Nunito Bold';
     transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
  .step--complete.step--active .step__icon {
-	 color: #fff;
+	 color: var(--white-color);
 	 transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
  .step--complete .step__icon {
 	 animation: bounce 0.5s ease-in-out;
-	 background-color: #FDDA44;
-	 border-color: #FDDA44;
-	 color: #fff;
+	 background-color: var(--primary);
+	 border-color: var(--primary);
+	 color: var(--white-color);
 }
  .step__label {
 	 position: absolute;
@@ -247,10 +261,10 @@ font-family: 'Nunito Bold';
 	 transform: translateX(-50%);
 }
 .step--incomplete.step--inactive .step__label {
-	 color: #e6e7e8;
+	 color: var(--cyna-blue-color);
 }
  .step--incomplete.step--active .step__label {
-	 color: #fff;
+	 color: var(--white-color);
 }
  .step--active .step__label {
 	 transition: color 0.3s ease-in-out;
@@ -259,10 +273,7 @@ font-family: 'Nunito Bold';
 /* Progress Bar Css End */
 
 /* Appointment For Section Css Start */
-/* .appointment-for-first {
-    margin-top: 100px;
-    margin-bottom: 150px;
-} */
+
 .appointment-outer-div {
     display: flex;
     gap: 50px;
@@ -270,14 +281,14 @@ font-family: 'Nunito Bold';
 }
 .appointment-for-second {
     margin-top: 3rem;
-     /* margin-bottom: 150px; */
 }
 .appointment-for h2 {
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
 }
-.appointment-for h2::after, .appointment-category-selection h2::after{
+
+.appointment-for h2::after, .appointment-category-selection h2::after,  .book-your-slot h2::after{
     content: '';
-    background-color: #FDDA44;
+    background-color: var(--primary);
     width: 200px;
     height: 3px;
     display: block;
@@ -287,7 +298,7 @@ font-family: 'Nunito Bold';
 }
 .appointment-inner {
     border-radius: 10px;
-    background-color: #FDDA44;
+    background-color: var(--primary);
     text-align: center;
     padding: 30px;
     width: 200px;
@@ -299,25 +310,47 @@ font-family: 'Nunito Bold';
 }
 .appointment-inner h3{
     margin-top: 25px;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 20px;
     line-height: 12px;
-    color: #000;
+    color: var(--secondary);
 }
 /* Appointment For Section Css End */
 
 /* Choose Location Section Start */
-.appointfor-location-outer:not(:last-child) {
-    margin-bottom: 3rem;
+.appointfor-location-outer-location {
+    gap: 50px;
 }
+.appointment-for .appointfor-location-outer {
+    width: 85%;
+}
+.appointfor-location-outer-main {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.appointfor-location-outer {
+    width: 48%;
+}
+/* .appointfor-location-outer:not(:last-child) {
+    margin-bottom: 50px;
+} */
+/* .appointfor-location-outer:nth-child(odd) {
+    padding-right: 25px;
+}
+.appointfor-location-outer:nth-child(even) {
+    padding-left: 25px;
+} */
 .appointfor-location{
-    background-color: #FDDA44;
+    background-color: var(--primary);
     padding: 30px;
 }
 .appointfor-location-div {
     display: flex;
     align-items: center;
 }
+
 .appointfor-location-icon {
     width: 300px;
 }
@@ -329,7 +362,7 @@ font-family: 'Nunito Bold';
     display: block;
 }
 .appointfor-location-icon h3{
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 22px;
     line-height: 28px;
     text-align: center;
@@ -342,20 +375,20 @@ font-family: 'Nunito Bold';
 }
 .appointfor-location-content p {
     font-size: 23px;
-    font-family: 'Nunito Regular';
+    font-family: var(--bold-font);
     line-height: 28px;
     margin-bottom: 15px;
 }
 .appointfor-location-content span {
     font-size: 18px;
-    font-family: 'Nunito Regular';
+    font-family: var(--Regular-font);
     line-height: 0;
 }
 .appointfor-location-content::before{
     content: '';
     width: 3px;
     height: 100%;
-    background-color: #000;
+    background-color: var(--secondary);
     position: absolute;
     left: -50px;
 }
@@ -391,19 +424,29 @@ font-family: 'Nunito Bold';
     cursor: pointer;
 }
 .colorRed {
-    color: #000;
+    color: var(--secondary);
+}
+.choose-date-picker-outer {
+    width: 46%;
+}
+.choose-date-time-outer {
+    width: 46%;
+}
+.choose-date-outer-main {
+    gap: 50px;
+    justify-content: space-evenly;
 }
 #calender-wrapper {
     position: relative;
-    border: 6px solid #000;
+    border: 6px solid var(--secondary);
     border-radius: 10px;
     overflow: hidden;
     border-top: 0px !important;
 }
 
 #calender-title {
-    background: #000;
-    color: white;
+    background: var(--secondary);
+    color: var(--white-color);
     font-size: 18pt;
     height: 60px;
 }
@@ -414,7 +457,7 @@ font-family: 'Nunito Bold';
 #calender-title p {
     height: 60px;
     width: 150px;
-    color: #fff;
+    color: var(--white-color);
 }
 #calender-content {
     width: 500px;
@@ -425,13 +468,13 @@ font-family: 'Nunito Bold';
     width: 100%;
     height: 100%;
     font-size: 20pt;
-    color: white;
+    color: var(--white-color);
 }
 #booking-wrapper {
     position: absolute;
     height: 650px;
     width: 720px;
-    background: white;
+    background: var(--white-color);
     border-radius: 10px 10px 0 0;
     margin-top: 150px;
     transition: 0.4s;
@@ -441,7 +484,7 @@ font-family: 'Nunito Bold';
     margin-top: -645px;
 }
 #booking-title {
-    color: white;
+    color: var(--white-color);
     font-size: 30pt;
     height: 60px;
     width: 100%;
@@ -449,7 +492,7 @@ font-family: 'Nunito Bold';
 
 textarea.formError, input.formError {
     transition: 0.4s;
-    background: #fdd !important;
+    background: var(--white-color) !important;
     box-shadow: inset 0px 0px 0px 5px rgba(205, 108, 108, 0.92);
 }
 
@@ -462,11 +505,11 @@ textarea.formError, input.formError {
    width: 68px;
    text-align: center;
    font-size: 15px;
-   font-family: 'Nunito Bold';
+   font-family: var(--bold-font);
 }
 
 .month-selector {
-   font-family: 'Nunito Regular';
+    font-family: var(--Regular-font);
     width: 50px;
     height: 50px;
     transition: 0.4s;
@@ -476,47 +519,35 @@ textarea.formError, input.formError {
     transform: translate(-50%, -50%);
 }
 .month-selector.clicked {
-    background: #FDDA44;
-    color: white;
-}
-.month-selector.booked {
-    background: #743131;
-    color: white;
-    overflow: hidden;
-}
-.month-selector.booked:after {
-    content: 'X';
-    position: absolute;
-    margin-top: -3px;
-    font-size: 100pt;
-    font-family: "Ubuntu";
-    opacity: 0.1;
+    background: var(--primary);
+    color: var(--white-color);
 }
 .clickable:hover {
     z-index: 3;
     height: 50px;
    width: 50px;
     box-shadow: 0px 0px 13px 4px rgba(0, 0, 0, 0.14);
-    background: #000;
+    background: var(--secondary);
     color: white;
 }
 .clickable:hover p {
-    color: white;
+    color: var(--white-color);
 }
 /* Choose Location Section End */
 
 /* Appointment Category Selection Css Start */
 .appointment-category-selection .appointfor-location-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .appointment-category-selection .appointfor-location-content h3{
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 26px;
     line-height: 36px;
     margin-bottom: 10px;
 }
 .appointment-category-selection .appointfor-location-content p{
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 18px;
     line-height: 22px;
     min-height: 45px;
@@ -531,14 +562,14 @@ textarea.formError, input.formError {
     right: -47px;
 }
 .book-now {
-    background-color: #FDDA44;
+    background-color: var(--primary);
     padding: 15px;
     text-align: center;
     width: 188px;
 }
 .book-now h3 {
     position: relative;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 20px;
     line-height: 28px;
 }
@@ -546,7 +577,7 @@ textarea.formError, input.formError {
     content: '';
     width: 95px;
     height: 2px;
-    background-color: #000;
+    background-color: var(--secondary);
     position: absolute;
     left: 0;
     top: auto;
@@ -555,7 +586,7 @@ textarea.formError, input.formError {
     right: 0;
 }
 .book-now h4 {
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 16px;
     line-height: 24px;
     margin-top: 4px;
@@ -563,6 +594,18 @@ textarea.formError, input.formError {
 .book-now-div {
     display: flex;
     justify-content: center;
+}
+.book-now-outer-div {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+.book-now-left {
+    width: 50%;
+}
+.book-your-slot-outer {
+    margin-bottom: 50px;
 }
 .book-your-slot .appointfor-location {
     margin-bottom: 0rem;
@@ -582,14 +625,14 @@ textarea.formError, input.formError {
     float: left;
 }
 .book-your-slot .appointfor-location-content h3 {
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 10px;
     min-height: 0px;
 }
 .book-your-slot .appointfor-location-content p {
-    font-family: 'Nunito Regular';
+    font-family: var(--Regular-font);
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 0;
@@ -605,8 +648,8 @@ textarea.formError, input.formError {
     margin-bottom: 100px;
 }
 .choose-date-content p {
-    color: #FDDA44;
-    font-family: 'Nunito Regular';
+    color: var(--primary);
+    font-family: var(--Regular-font);
     font-size: 24px;
     line-height: 30px;
 }
@@ -614,9 +657,9 @@ textarea.formError, input.formError {
     margin-bottom: 30px;
 }
 .choose-date-time h3{
-    font-family: 'Nunito Bold';
-    font-size: 20px;
-    line-height: 28px;
+    font-family: var(--bold-font);
+    font-size: 25px;
+    line-height: 32px;
     margin-bottom: 30px;
 }
 .choose-slot-booking ul {
@@ -625,10 +668,11 @@ textarea.formError, input.formError {
     align-content: flex-start;
     gap: 30px;
 }
+
 .choose-slot-booking ul li button{
-    background-color: #FDDA44;
-    color: #000;
-    font-family: 'Nunito Regular';
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: var(--Regular-font);
     font-size: 15px;
     line-height: 0;
     width: 170px;
@@ -638,15 +682,15 @@ textarea.formError, input.formError {
     border: none;
 }
 .choose-slot-booking ul li button:hover,.choose-slot-booking ul li button.active{
-    background-color: #000;
-    color: #fff;
+    background-color: var(--secondary);
+    color: var(--white-color);
 }
 .choose-slot-booking p {
     display: flex;
     margin-top: 30px;
     align-items: center;
     gap: 10px;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 15px;
 }
 
@@ -661,13 +705,13 @@ textarea.formError, input.formError {
 
 .booking-date {
     font-size: 100px;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     line-height: 90px;
-    color: #000;
+    color: var(--secondary);
 }
 .booking-month {
-    font-family: 'Nunito Bold';
-    color: #000000;
+    font-family: var(--bold-font);
+    color: var(--secondary);
     font-size: 28px;
 }
 .booking-time-outer {
@@ -678,19 +722,19 @@ textarea.formError, input.formError {
     margin: 0 auto;
 }
 .booking-year {
-    font-family: 'Nunito Bold';
-    color: #000000;
+    font-family: var(--bold-font);
+    color: var(--secondary);
     font-size: 28px;
 }
 .booking-time-outer h3{
-    color: #000;
+    color: var(--secondary);
     font-size: 35px;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
 }
 .booking-time-outer h4{
-    color: #000;
+    color: var(--secondary);
     font-size: 35px;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
 }
 .booking-date-time-div {
     margin-top: 50px;
@@ -699,59 +743,59 @@ textarea.formError, input.formError {
     margin-top: 50px;
 }
 .form-control:focus {
-    color: #000;
-    background-color: #fff;
-    border-color: #F2C94C;
+    color: var(--secondary);
+    background-color: var(--white-color);
+    border-color: var(--border-color);
     outline: 0;
     box-shadow: none;
 }
 .form-control {
-    color: #000;
-    background-color: #fff;
+    color: var(--secondary);
+    background-color: var(--white-color);
     outline: 0;
-    border:3px solid #F2C94C;
+    border:3px solid var(--border-color);
     box-shadow: none;
     border-radius: 10px;
     padding: 15px;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
 }
   .form-control::-webkit-input-placeholder { /* Edge */
-    color: #000;
-    font-family: 'Nunito Bold';
+    color: var(--secondary);
+    font-family: var(--bold-font);
   }
   
   .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #000;
-    font-family: 'Nunito Bold';
+    color: var(--secondary);
+    font-family: var(--bold-font);
   }
   
   .form-control::placeholder {
-    color: #000;
-    font-family: 'Nunito Bold';
+    color: var(--secondary);
+    font-family: var(--bold-font);
   }
   .booking-submit {
-    background-color: #FDDA44;
-    color: #000;
+    background-color: var(--primary);
+    color: var(--secondary);
     border: none;
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     border-radius: 10px;
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 30px;
-    font-size: 22px;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 16px;
   }
   .booking-submit:hover, .booking-submit:active, .booking-submit:focus, .booking-submit:active:focus {
-    background-color: #FDDA44;
+    background-color: var(--primary);
     border: none;
-    color: #000;
+    color: var(--secondary);
     box-shadow: none;
   }
   .booking-submit::before {
     content: '';
     background-image: url(../images/submit-icon.png);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     background-size: cover;
 }
@@ -765,7 +809,7 @@ footer {
 }
 .back-div {
     border-radius: 10px;
-    background: #FDDA44;
+    background: var(--primary);
     width: 168px;
     height: 57px;
     display: flex;
@@ -778,12 +822,12 @@ footer {
     margin-right: 20px;
 }
 .back-div h3{
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 18px;
     line-height: 25px;
 }
 footer p {
-    font-family: 'Nunito Bold';
+    font-family: var(--bold-font);
     font-size: 16px;
 }
 .back-div-outer {
@@ -791,7 +835,7 @@ footer p {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--secondary);
     padding-top: 1rem;
     padding-left: 0;
     padding-right: 0;
@@ -801,6 +845,52 @@ footer p {
     column-gap: 15px;
 }
 .back-div-outer ul li img{
-    width: 40px;
+    width: 25px;
 }
 /* Footer Css End */
+
+/* thankyou page css start */
+.thankyou-main-outer{
+    padding: 30px;
+    background-color:var(--white-color);
+}
+.thankyou-text-div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.thankyou-text-div h1{
+    font-size: 30px;
+    line-height: 40px;
+}
+.thankyou-text-div p{
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+.appointment-center {
+    display: flex;
+    margin-top: 30px;
+}
+.appointment-center h2{
+    font-size: 30px;
+    color: var(--secondary);
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-family: var(--bold-font);
+}
+.appointment-center h3{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: var(--bold-font);
+}
+.appointment-center p{
+    color: var(--secondary);
+    font-family: var(--Regular-font);
+}
+/* thankyou page css end */

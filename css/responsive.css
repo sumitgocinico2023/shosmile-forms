@@ -1,3 +1,10 @@
+:root {
+    /*  Color Code  */
+    --primary: #FDDA44;
+    --secondary: #000000;
+    --white-color: #ffffff;
+}
+
 @media only screen and (min-width: 1400px) { 
     .header-content {
         margin-left: -150px;
@@ -5,6 +12,14 @@
 }
 
 @media only screen and (max-width: 1399px) { 
+    .appointment-category-selection .appointfor-location-content h3 {
+        font-size: 26px;
+        line-height: 36px;
+        min-height: 72px;
+    }
+    .appointfor-location-outer {
+        width: 45%;
+    }
     #days p {
         width: 61px;
     }
@@ -16,6 +31,9 @@
 }
 
 @media only screen and (max-width: 1199px) { 
+    .book-now-left {
+        width: 60%;
+    }
     .appointment-category-selection .appointfor-location-content h3 {
         font-size: 26px;
         line-height: 36px;
@@ -31,6 +49,15 @@
 }
 
 @media only screen and (max-width: 991px) {
+    .book-now-left {
+        width: 70%;
+    }
+    .appointfor-location-outer {
+        width: 100%;
+    }
+    .header-content {
+        padding: 10px;
+    }
     .choose-slot-booking {
         margin-top: 20px;
     }
@@ -47,7 +74,7 @@
         width: 130px;
     }
     .book-now {
-        background-color: #FDDA44;
+        background-color: var(--primary);
         padding: 15px;
         text-align: center;
         width: 140px;
@@ -78,13 +105,22 @@
     }
     .header-inner {
         padding: 30px;
-        border: 3px solid #000000;
-        border-right: 3px solid #000000;
+        border: 3px solid var(--secondary);
+        border-right: 3px solid var(--secondary);
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px;
     }
 }
 @media only screen and (max-width: 767px) {
+    .book-now {
+        padding: 0;
+    }
+    .book-now-left {
+        width: 100%;
+    }
+    .appointment-for .appointfor-location-outer {
+        width: 100%;
+    }
     #calender-title p {
         font-size: 18px;
     }
@@ -104,25 +140,40 @@
     .choose-slot-booking ul li button {
         width: 92px;
     }
-    .appointfor-location-div {
+    .book-your-slot .appointfor-location-div {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 60%;
         position: relative;
     }
-    .next-icon {
+    .book-your-slot .appointfor-location {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .next-icon img {
+        width: 35px;
+        right: auto;
+        top: auto;
+        margin-top: 0;
+    }
+    .book-your-slot .appointfor-location-content::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
         position: absolute;
         left: 0;
         right: 0;
-        text-align: center;
-        bottom: 0;
-        margin-bottom: -38px;
+        top: 4px;
     }
-    .next-icon img {
-        right: 0px;
-        rotate: 90deg;
+    .book-your-slot .appointfor-location-content {
+        width: auto;
+        margin-left: 0;
+        padding-top: 15px;
     }
-    .book-now-div {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
+    .book-now-outer-div {
+        flex-direction: column;
     }
     .appointfor-location-content::before {
         left: -30px;
@@ -131,13 +182,13 @@
         text-align: center;
     }
     footer {
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
     .header-outer {
         margin-top: 2rem;
     }
     .progress-div {
-        margin-top: 50px;
+        margin-top: 30px;
         margin-bottom: 20px;
     }
     .header-inner h1 {
@@ -148,8 +199,117 @@
         font-size: 20px;
         line-height: 28px;
     }
+
+    .mobile-header-call-action {
+        position: fixed;
+        top: 25px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        float: right;
+        width: 19%;
+        left: 0;
+    }
+    .mobile-header-call-action-div {
+        width: 37px;
+        background-color: var(--primary);
+        height: 37px;
+        border-radius: 50px;
+        float: left;
+        transition: width 1s;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+    .mobile-header-call-action img {
+        margin-top: 0;
+        margin-right: 0px;
+        transition: transform .7s ease-in-out;
+        width: 35px;
+    }
+    .mobile-header-call-action-div p {
+        display: none;
+        text-align: right;
+        margin-right: 12px;
+        position: relative;
+        top: -22px;
+        color: var(--secondary);
+        font-family: var(--bold-font);
+    }
+    .mobile-header-call-action-div:hover {
+        width: 100%;
+    }
+    .mobile-header-call-action-div:hover img {
+        transform: rotate(360deg);
+        margin-right: 60px;
+    }
+    .mobile-header-call-action-div:hover p {
+        display: block;
+        position: relative;
+        top: -28px;
+        color: var(--secondary);
+        font-family: var(--bold-font);
+    }
 } 
 @media only screen and (max-width: 576px) { 
+    .appointment-category-selection .appointfor-location-content h3 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .appointfor-location-outer-main {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .appointfor-location-outer-location {
+        gap: 30px;
+    }
+    .appointment-outer-div {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .appointfor-location-icon {
+        width: 400px;
+    }
+    .appointment-category-selection .appointfor-location-icon {
+        width: 150px;
+    }
+    .appointfor-location-content::before {
+        width: 2px;
+    }
+    .appointfor-location-icon h3 {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .book-your-slot .appointfor-location-content {
+        margin-left: 0px;
+    }
+    .booking-date-time-form {
+        margin-top: 20px;
+    }
+    .booking-time-outer {
+        gap: 2px;
+    }
+    .booking-date-time-div {
+        margin-top: 30px;
+    }
+    .booking-date {
+        font-size: 56px;
+        line-height: 45px;
+    }
+    .booking-month {
+        font-size: 15px;
+    }
+    .booking-year {
+        font-size: 15px;
+    }
+    .booking-time-outer h3 {
+        font-size: 22px;
+    }
+    .booking-time-outer h4 {
+        font-size: 22px;
+    }
     .month-selector {
         width: 42px;
         height: 42px;
@@ -173,18 +333,16 @@
         width: auto;
         text-align: center;
     }
-    .book-your-slot .appointfor-location-content::before {
-        left: -27px;
-        height: 2px;
-    }
     .appointment-category-selection .appointfor-location-content p {
         min-height: auto;
+        font-size: 15px;
+    line-height: 19px;
     }
     .appointment-category-selection .appointfor-location-content h3 {
         min-height: auto;
     }
     .appointfor-location-content span {
-        font-size: 14px;
+        font-size: 16px;
     }
     .appointfor-location-content p {
         font-size: 17px;
@@ -194,45 +352,45 @@
     .appointfor-location {
         padding: 20px;
     }
-    .appointfor-location-content::before {
+    /* .appointfor-location-content::before {
         content: '';
         width: 100%;
         height: 2px;
-        background-color: #000;
+        background-color: var(--secondary);
         position: absolute;
         text-align: center;
         left: 0px !important;
         right: 0;
         top: 0;
-    }
-    .appointfor-location-content {
+    } */
+    /* .appointfor-location-content {
         width: auto;
         margin-left: 0px;
         position: relative;
         padding-top: 15px;
-    }
-    .appointfor-location-icon {
+    } */
+    /* .appointfor-location-icon {
         width: auto;
         margin-bottom: 15px;
-    }
+    } */
 
-    .appointfor-location-div {
+    /* .appointfor-location-div {
         display: flex;
         align-items: center;
         flex-direction: column;
-    }
-    .appointment-category-selection .appointfor-location-div {
+    } */
+    /* .appointment-category-selection .appointfor-location-div {
         display: flex;
         align-items: center;
         flex-direction: column;
-    }
+    } */
     .appointment-category-selection .appointfor-location-content {
         width: 100%;
     }
     .big-step {
-        width: 55px;
-        height: 55px;
-        font-size: 30px;
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
     }
     .steps {
         padding-left: 10px;
@@ -244,9 +402,6 @@
     .appointment-inner {
         width: 170px;
     }
-    .appointment-outer-div {
-        gap: 10px;
-    }
     .header-inner {
         padding: 20px;
     }
@@ -254,5 +409,42 @@
         font-size: 28px;
         line-height: 36px;
         margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) { 
+    .book-your-slot .appointfor-location-content h3 {
+        font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    min-height: 0px;
+    }
+    .book-your-slot .appointfor-location-div {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 48%;
+        position: relative;
+    }
+    .book-your-slot .book-now {
+        width: 95px;
+    }
+    .book-your-slot .book-now h3 {
+        font-size: 19px;
+        line-height: 30px;
+    }
+    .book-now h4 {
+        font-size: 15px;
+    }
+    .book-your-slot .book-now h3::after {
+        width: 100%;
+    }
+    .book-your-slot .appointfor-location {
+        padding: 10px;
+    }
+    .book-your-slot .appointfor-location-icon img {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
     }
 }
