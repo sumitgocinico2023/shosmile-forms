@@ -14,6 +14,18 @@
 // });
 
 
+
+$(document).ready(function () {
+    $('html, body').animate({
+        scrollTop: $('.progress-div').offset().top
+    }, 1000);
+
+	$('.step--complete .step__icon').click(function(){
+		history.go(-1)
+	});
+});
+
+
 var currentMonth = new Date().getMonth();
 var currentYear = new Date().getFullYear();
 var clickedDays = 0;

@@ -70,9 +70,6 @@
         transition: 0.4s;
     }
 
-    .choose-slot-booking ul li button {
-        width: 130px;
-    }
     .book-now {
         background-color: var(--primary);
         padding: 15px;
@@ -108,6 +105,81 @@
     }
 }
 @media only screen and (max-width: 767px) {
+    .location-appointment .appointfor-location-content span {
+        font-size: 15px;
+        display: block;
+        line-height: 19px;
+    }
+    .location-appointment .appointfor-mobile-address p {
+        font-size: 15px;
+        font-family: var(--bold-font);
+        line-height: 20px;
+    }
+    .location-appointment .appointfor-location-content p {
+        margin-bottom: 0px;
+    }
+    .location-appointment .appointfor-mobile-address {
+        position: relative;
+        margin-top: 25px;
+    }
+    .location-appointment .appointfor-mobile-address::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
+        position: absolute;
+        top: -13px;
+
+    }
+    .location-appointment .appointfor-location-icon h3 {
+        margin-top: 0;
+        text-align: left;
+    }
+    .location-appointment .appointment-area-location {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+    }
+    .location-appointment .appointfor-location-icon img {
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .location-appointment .appointfor-location-icon {
+        width: 600px;
+    }
+    .book-now-outer-div {
+        gap: 20px;
+    }
+    .next-icon {
+        top: 42%;
+    }
+    .book-your-slot .appointfor-location-content p {
+        margin-top: 12px;
+    }
+    .book-your-slot .appointfor-location-icon h3 {
+        text-align: left;
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 15px;
+    }
+    .book-your-slot .appointfor-location-icon {
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    .book-your-slot .appointfor-location-content {
+        width: auto;
+        margin-left: 0px;
+    }
+    /* .appointfor-location-div {
+        flex-direction: column;
+    } */
+    .thankyou-div-outer {
+        margin-top: 30px;
+    }
     .thankyou-mobile.thankyou-new-appointment {
         top: 20px;
     }
@@ -135,50 +207,38 @@
         line-height: 30px;
     }
     .book-now {
-        padding: 0;
+        margin-left: 20px;
     }
-    .book-now-left {
-        width: 100%;
-    }
+
     .appointment-for .appointfor-location-outer {
         width: 100%;
     }
     #calender-title p {
         font-size: 18px;
     }
-    .choose-date-content p:not(:last-child) {
-        margin-bottom: 20px;
-    }
     .choose-date-content p {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 24px;
     }
     .choose-date-content {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         margin-top: 0;
         margin-bottom: 30px;
     }
-    .choose-slot-booking ul li button {
-        width: 92px;
-    }
-    .book-your-slot .appointfor-location-div {
+
+    /* .book-your-slot .appointfor-location-div {
         flex-direction: column;
         align-items: flex-start;
         width: 60%;
         position: relative;
-    }
-    .book-your-slot .appointfor-location {
+    } */
+    /* .book-your-slot .appointfor-location {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    .next-icon img {
-        width: 35px;
-        right: auto;
-        top: auto;
-        margin-top: 0;
-    }
+    } */
+
     .book-your-slot .appointfor-location-content::before {
         content: '';
         width: 100%;
@@ -189,14 +249,12 @@
         right: 0;
         top: 4px;
     }
-    .book-your-slot .appointfor-location-content {
+    /* .book-your-slot .appointfor-location-content {
         width: auto;
         margin-left: 0;
         padding-top: 15px;
-    }
-    .book-now-outer-div {
-        flex-direction: column;
-    }
+    } */
+
     .appointfor-location-content::before {
         left: -30px;
     }
@@ -245,6 +303,9 @@
     }
 } 
 @media only screen and (max-width: 576px) {
+    .book-your-slot-outer {
+        margin-bottom: 30px;
+    }
     .appointment-center {
         display: flex;
         margin-top: 0px;
@@ -384,10 +445,10 @@
         min-height: auto;
     }
     .appointfor-location-content span {
-        font-size: 16px;
+        font-size: 15px;
     }
     .appointfor-location-content p {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 22px;
         margin-bottom: 5px;
     }
@@ -455,8 +516,22 @@
 }
 
 @media only screen and (max-width: 480px) { 
+    .next-icon img {
+        width: 22px;
+    }
+    .book-your-slot .appointfor-location-content p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 0;
+        min-height: 0;
+    }
+    .book-your-slot .appointfor-location-icon h3 {
+        font-size: 13px;
+        line-height: 17px;
+        margin-left: 7px;
+    }
     .book-your-slot .appointfor-location-content h3 {
-        font-size: 15px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 10px;
     min-height: 0px;
@@ -464,29 +539,34 @@
     .book-your-slot .appointfor-location-div {
         flex-direction: column;
         align-items: flex-start;
-        width: 48%;
         position: relative;
     }
-    .book-your-slot .book-now {
-        width: 95px;
-    }
     .book-your-slot .book-now h3 {
-        font-size: 19px;
+        font-size: 15px;
         line-height: 30px;
     }
     .book-now h4 {
-        font-size: 15px;
-    }
-    .book-your-slot .book-now h3::after {
-        width: 100%;
+        font-size: 12px;
     }
     .book-your-slot .appointfor-location {
         padding: 10px;
+        padding-right: 10%;
     }
     .book-your-slot .appointfor-location-icon img {
         float: left;
         width: 40px;
         height: 40px;
-        margin-bottom: 10px;
+    }
+    .book-now {
+        margin-left: 5px;
+        padding: 5px;
+        width: 110px;
+    }
+    .book-now h3::after {
+        width: 80%;
+    }
+    .next-icon {
+        top: 37%;
+        right: -12px;
     }
 }
