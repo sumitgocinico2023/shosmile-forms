@@ -105,13 +105,35 @@
     }
     .header-inner {
         padding: 30px;
-        border: 3px solid var(--secondary);
-        border-right: 3px solid var(--secondary);
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
     }
 }
 @media only screen and (max-width: 767px) {
+    .thankyou-mobile.thankyou-new-appointment {
+        top: 20px;
+    }
+    .thankyou-mobile.thankyou-close-appointment {
+        top: 70px;
+    }
+    .thankyou-mobile.thankyou-new-appointment {
+        left: 10px;
+        right: auto;
+        width: auto;
+    }
+    .thankyou-mobile.thankyou-new-appointment .header-call-action-div {
+        margin-right:0px
+    }
+    .appointment-center h2,
+    .your-appointment-outer h2,
+    .your-details-outer h2{
+        font-size: 26px;
+    }
+    .thankyou-text-div p {
+        padding: 15px;
+    }
+    .thankyou-text-div h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
     .book-now {
         padding: 0;
     }
@@ -203,12 +225,7 @@
     .mobile-header-call-action {
         position: fixed;
         top: 25px;
-        text-align: center;
-        margin: 0 auto;
-        display: block;
-        float: right;
-        width: 19%;
-        left: 0;
+        left: 8px;
     }
     .mobile-header-call-action-div {
         width: 37px;
@@ -219,7 +236,6 @@
         transition: width 1s;
         overflow: hidden;
         white-space: nowrap;
-        margin-right: 10px;
     }
     .mobile-header-call-action img {
         margin-top: 0;
@@ -227,31 +243,57 @@
         transition: transform .7s ease-in-out;
         width: 35px;
     }
-    .mobile-header-call-action-div p {
-        display: none;
-        text-align: right;
-        margin-right: 12px;
-        position: relative;
-        top: -22px;
-        color: var(--secondary);
-        font-family: var(--bold-font);
-    }
-    .mobile-header-call-action-div:hover {
-        width: 100%;
-    }
-    .mobile-header-call-action-div:hover img {
-        transform: rotate(360deg);
-        margin-right: 60px;
-    }
-    .mobile-header-call-action-div:hover p {
-        display: block;
-        position: relative;
-        top: -28px;
-        color: var(--secondary);
-        font-family: var(--bold-font);
-    }
 } 
-@media only screen and (max-width: 576px) { 
+@media only screen and (max-width: 576px) {
+    .appointment-center {
+        display: flex;
+        margin-top: 0px;
+    }
+    .appointment-for h2,
+    .appointment-category-selection h2,
+    .book-your-slot h2 {
+        font-size: 22px;
+    }
+    .thankyou-text-div img {
+        width: 25px;
+    }
+    .your-details-outer ul li p {
+        font-size: 16px;
+        font-family: var(--Regular-font);
+    }
+    .your-appointment-outer ul li p {
+        font-size: 16px;
+        font-family: var(--Regular-font);
+    }
+    .your-appointment-innner:not(:first-child) {
+        margin-top: 20px;
+    } 
+    .your-details-outer {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .appointment-center h2,
+    .your-appointment-outer h2,
+    .your-details-outer h2 {
+        font-size: 22px;
+    }
+    .thankyou-text-div p {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .thankyou-text-div h1 {
+        font-size: 16px;
+        line-height: 15px;
+    }
+    .thankyou-main-outer,
+    .your-details-outer,
+    .your-appointment-outer {
+        padding: 15px;
+    }
+    /* .thankyou-text-div {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
     .appointment-category-selection .appointfor-location-content h3 {
         font-size: 20px;
         line-height: 25px;

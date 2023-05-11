@@ -76,16 +76,12 @@ header img{
     margin: 0 auto;
     display: block;
     float: none;
-    /* width: 135px; */
+    width: 135px;
     max-width: none !important;
 }
 .header-inner{
     background: var(--primary);
     padding: 30px;
-    border: 3px solid var(--secondary);
-    border-right: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 .header-inner h1{
     font-family: var(--bold-font);
@@ -104,42 +100,59 @@ header img{
 }
 .header-call-action {
     position: fixed;
-top: 25px;
-text-align: center;
-margin: 0 auto;
-display: block;
-float: right;
-width: 8%;
-right: 0;
+    top: 25px;
+    text-align: center;
+    margin: 0 auto;
+    float: right;
+    width: 8%;
+    right: 0;
+}
+.thankyou-new-appointment {
+    width: 13%;
+    top: 5px;
+}
+.thankyou-close-appointment {
+    top: 50px;
+}
+.thankyou-new-appointment .header-call-action-div:hover img {
+    transform: rotate(0deg);
+}
+.thankyou-new-appointment .header-call-action-div img {
+
 }
 .header-call-action-div {
-width: 37px;
-background-color: var(--primary);
-height: 37px;
-border-radius: 50px;
-float: right;
-transition: width 1s;
-overflow: hidden;
-white-space: nowrap;
-margin-right: 10px;
+    width: 37px;
+    background-color: var(--primary);
+    /* height: 37px; */
+    border-radius: 50px;
+    float: right;
+    transition: width 1s;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.header-call-action-div a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .header-call-action img {
 margin-top: 0;
 margin-right: 0px;
 transition: transform .7s ease-in-out;
-width: 35px;
+width: 30px;
 }
 
 .header-call-action-div:hover img {
 transform: rotate(360deg);
-margin-right: 60px;
+margin-right: 4px;
+margin-left: 4px;
 }
 .header-call-action-div p {
 display: none;
-text-align: right;
-margin-right: 12px;
-position: relative;
-top: -22px;
 color: var(--secondary);
 font-family: var(--bold-font);
 }
@@ -148,8 +161,8 @@ width: 100%;
 }
 .header-call-action-div:hover p {
 display: block;
-position: relative;
-top: -28px;
+/* position: relative;
+top: -28px; */
 color: var(--secondary);
 font-family: var(--bold-font);
 }
@@ -282,7 +295,9 @@ font-family: var(--bold-font);
 .appointment-for-second {
     margin-top: 3rem;
 }
-.appointment-for h2 {
+.appointment-for h2,
+.appointment-category-selection h2,
+.book-your-slot h2 {
     font-family: var(--bold-font);
 }
 
@@ -867,10 +882,13 @@ footer p {
 .thankyou-text-div p{
     background-color: var(--primary);
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 50px;
     margin-top: 15px;
     display: inline-block;
-    font-weight: bold;
+    font-family: var(--bold-font);
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .appointment-center {
     display: flex;
@@ -892,5 +910,56 @@ footer p {
 .appointment-center p{
     color: var(--secondary);
     font-family: var(--Regular-font);
+}
+.your-details-outer {
+    padding: 30px;
+    background-color: var(--white-color);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.your-details-outer h2 {
+    font-size: 30px;
+    color: var(--secondary);
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-family: var(--bold-font);
+}
+.your-details-outer ul li p {
+    font-size: 18px;
+    font-family: var(--Regular-font);
+}
+.your-details-outer ul li p strong {
+    font-family: var(--bold-font);
+}
+.your-appointment-outer {
+    padding: 30px;
+    background-color: var(--white-color);
+}
+.your-appointment-outer h2  {
+    font-size: 30px;
+    color: var(--secondary);
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-family: var(--bold-font);
+}
+.your-appointment-outer h3 {
+    font-size: 18px;
+    color: var(--secondary);
+    line-height: 28px;
+    font-family: var(--bold-font);
+}
+.your-appointment-outer ul li p {
+    font-size: 18px;
+    font-family: var(--Regular-font);
+}
+.your-appointment-outer ul li p strong {
+    font-family: var(--bold-font);
+}
+
+.your-appointment-innner:not(:first-child) {
+    margin-top: 30px;
+}
+.thankyou-div-outer {
+    margin-top: 100px;
 }
 /* thankyou page css end */
