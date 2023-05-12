@@ -1,9 +1,4 @@
-:root {
-    /*  Color Code  */
-    --primary: #FDDA44;
-    --secondary: #000000;
-    --white-color: #ffffff;
-}
+@import "variable.css";
 
 @media only screen and (min-width: 1400px) { 
     .header-content {
@@ -104,7 +99,30 @@
         padding: 30px;
     }
 }
+@media (min-width:768px) and (max-width:991px) {
+    #days p {
+        width: 13%;
+    }
+    #calender-content {
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .month {
+        width: 12%;
+        height: 50px;
+        transition: 0.4s;
+    }
+}
 @media only screen and (max-width: 767px) {
+    header img {
+        width: var(--mobile-logo-width);
+    }
+    .book-your-slot .appointfor-location-div {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
     .location-appointment .appointfor-location-content span {
         font-size: 15px;
         display: block;
@@ -183,6 +201,44 @@
     .thankyou-mobile.thankyou-new-appointment {
         top: 20px;
     }
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-top-right {
+        right: 0;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-top-right {
+        right: 0;
+    }
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-top-left {
+        left: 0;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-top-left {
+        left: 0;
+    }
+
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-bottom-left {
+        left: 0;
+        bottom: 60px;
+        top: auto;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-bottom-left {
+        left: 0;
+        bottom: 10px;
+        top: auto;
+    }
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-bottom-right {
+        right: 0;
+        bottom: 60px;
+        top: auto;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-bottom-right {
+        right: 0;
+        bottom: 10px;
+        top: auto;
+    }
+
     .thankyou-mobile.thankyou-close-appointment {
         top: 70px;
     }
@@ -279,11 +335,30 @@
         font-size: 20px;
         line-height: 28px;
     }
-
+    .mobile-top-right {
+        right: 0;
+        top: 10px;
+        margin-right: 10px;
+    }
+    .mobile-bottom-right {
+        right: 0;
+        bottom: 10px;
+        margin-right: 10px;
+    }
+    .mobile-top-left {
+        left: 0;
+        top: 10px;
+        margin-left: 10px;
+    }
+    .mobile-bottom-left {
+        left: 0;
+        bottom: 10px;
+        margin-left: 10px;
+    }
     .mobile-header-call-action {
         position: fixed;
-        top: 25px;
-        left: 8px;
+        /* top: 25px;
+        left: 8px; */
     }
     .mobile-header-call-action-div {
         width: 37px;
@@ -423,7 +498,7 @@
     }
     .month {
         width: 14%;
-        height: 50px;
+        height: 44px;
         transition: 0.4s;
     }
     #days p {

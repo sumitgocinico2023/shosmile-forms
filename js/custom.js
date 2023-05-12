@@ -16,13 +16,11 @@
 
 
 $(document).ready(function () {
-    $('html, body').animate({
-        scrollTop: $('.progress-div').offset().top
-    }, 1000);
 
 	$('.step--complete .step__icon').click(function(){
 		history.go(-1)
 	});
+
 });
 
 
@@ -41,6 +39,10 @@ var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 var bookedDates = [];
 var selectedDates = [];
 
+var today = new Date();
+let mn = monthShortNames[today.getMonth()];
+
+var dd = String(today.getDate()).padStart(2, '0');
 
 Date.prototype.addDays = function(days) {
 	var dat = new Date(this.valueOf())
@@ -69,6 +71,7 @@ function getDates(startDate, stopDate) {
 		while (currentDate <= stopDate) {
 			dateArray.push(new Date(currentDate))
 			currentDate = currentDate.addDays(1);
+			
 		}
 		return dateArray;
 	}
@@ -87,34 +90,45 @@ function displayCalender() {
 	for (var i = 1; i < firstDayOffset(new Date()); i++) {
 		$("#calender-content").append("<div class='month flex center-vh'></div>");
 	}
+
 	for (var i = 1; i <= days; i++) {
 		var day = new Date(currentYear, currentMonth, i).getDay();
-		var string = "<div class='month'><div id='" + dayNames[day] + "-" + i + "-" + monthNames[currentMonth] + "-" + currentYear + "'class='month-selector flex center-vh clickable' onclick='monthClick(this)'><p>" + i + "</p></div></div>";
+		var string = "<div data-date='"+ i +"' class='outer-month-div month date-"+ monthNames[currentMonth] +"-"+i+"'  onclick='monthClick(this)'><div id='" + dayNames[day] + "-" + i + "-" + monthNames[currentMonth] + "-" + currentYear + "'class='month-selector flex center-vh clickable'><p>" + i + "</p></div></div>";
 		$("#calender-content").append(string);
+			if($('.date-'+mn+'-'+dd).attr('data-date') == i){
+				$('.date-'+mn+'-'+dd).addClass('clicked');
+			}
 	}
 
 	checkSelected();
 	checkBookings();
+	
 }
 function monthClick(e) {
-	if ($(e).hasClass("clickable")) {
-    
-        clickedDays += 1;
 
-		if (clickedDays == 1) {
-			$(e).toggleClass("clicked");
-			startDateIndex = parseInt($(e).attr('id').split('-')[1]);
-			startDate = new Date(currentYear, currentMonth, startDateIndex);
-		}
-		if (clickedDays > 1) {
-			endDateIndex = parseInt($(e).attr('id').split('-')[1]);
-			endDate = new Date(currentYear, currentMonth, endDateIndex);
-		}
-        $(this).addClass("clicked");
+		$('.month').removeClass("clicked");
+	 	$(e).addClass("clicked");
 
-		$("#startdate").html(startDate.toString().split(' ').slice(0, 4).join(' '));
-		$("#enddate").html(endDate.toString().split(' ').slice(0, 4).join(' '));
-	}
+		// if ($(e).hasClass("clickable")) {
+			
+		//     clickedDays += 1;
+
+		// 	if (clickedDays == 1) {
+		// 		$(e).toggleClass("clicked");
+		// 		startDateIndex = parseInt($(e).attr('id').split('-')[1]);
+		// 		startDate = new Date(currentYear, currentMonth, startDateIndex);
+		// 	}
+		// 	if (clickedDays > 1) {
+		// 		endDateIndex = parseInt($(e).attr('id').split('-')[1]);
+		// 		endDate = new Date(currentYear, currentMonth, endDateIndex);
+		// 	}
+		//     $(this).addClass("clicked");
+		
+
+		// 	$("#startdate").html(startDate.toString().split(' ').slice(0, 4).join(' '));
+		// 	$("#enddate").html(endDate.toString().split(' ').slice(0, 4).join(' '));
+		// }
+
 }
 function firstDayOffset(date) {
 	return new Date(currentYear, currentMonth, 1).getDay();
