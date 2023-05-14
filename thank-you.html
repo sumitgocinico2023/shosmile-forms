@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Shosmile Scheduling Form</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href='./css/style.css'>
+    <link rel='stylesheet' type='text/css' href='./css/responsive.css'>
+    
+</head>
+<body>
+    <!-- 
+        class for set position of back button for desktop 
+        desktop-top-right 
+        desktop-top-left  
+        desktop-bottom-right 
+        desktop-bottom-left 
+    -->
+        <div class="thankyou-new-appointment header-call-action d-none d-md-block desktop-top-right">
+            <div class="header-call-action-div">
+                <a href="./">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M81.61,4.73c0-2.61,2.58-4.73,5.77-4.73c3.19,0,5.77,2.12,5.77,4.73v20.72c0,2.61-2.58,4.73-5.77,4.73 c-3.19,0-5.77-2.12-5.77-4.73V4.73L81.61,4.73z M66.11,103.81c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9 c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,103.81z M15.85,67.09c-0.34,0-0.61-1.43-0.61-3.2 c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,67.09z M40.98,67.09 c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98 L40.98,67.09z M66.11,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9c0.34,0,0.61,1.43,0.61,3.2 c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,67.09z M91.25,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79 c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H91.25L91.25,67.09z M15.85,85.45c-0.34,0-0.61-1.43-0.61-3.2 c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,85.45z M40.98,85.45 c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98 L40.98,85.45z M66.11,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9c0.34,0,0.61,1.43,0.61,3.2 c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,85.45z M91.25,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79 c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H91.25L91.25,85.45z M15.85,103.81c-0.34,0-0.61-1.43-0.61-3.2 c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,103.81z M40.98,103.81 c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98 L40.98,103.81z M29.61,4.73c0-2.61,2.58-4.73,5.77-4.73s5.77,2.12,5.77,4.73v20.72c0,2.61-2.58,4.73-5.77,4.73 s-5.77-2.12-5.77-4.73V4.73L29.61,4.73z M6.4,45.32h110.07V21.47c0-0.8-0.33-1.53-0.86-2.07c-0.53-0.53-1.26-0.86-2.07-0.86H103 c-1.77,0-3.2-1.43-3.2-3.2c0-1.77,1.43-3.2,3.2-3.2h10.55c2.57,0,4.9,1.05,6.59,2.74c1.69,1.69,2.74,4.02,2.74,6.59v27.06v65.03 c0,2.57-1.05,4.9-2.74,6.59c-1.69,1.69-4.02,2.74-6.59,2.74H9.33c-2.57,0-4.9-1.05-6.59-2.74C1.05,118.45,0,116.12,0,113.55V48.52 V21.47c0-2.57,1.05-4.9,2.74-6.59c1.69-1.69,4.02-2.74,6.59-2.74H20.6c1.77,0,3.2,1.43,3.2,3.2c0,1.77-1.43,3.2-3.2,3.2H9.33 c-0.8,0-1.53,0.33-2.07,0.86c-0.53,0.53-0.86,1.26-0.86,2.07V45.32L6.4,45.32z M116.48,51.73H6.4v61.82c0,0.8,0.33,1.53,0.86,2.07 c0.53,0.53,1.26,0.86,2.07,0.86h104.22c0.8,0,1.53-0.33,2.07-0.86c0.53-0.53,0.86-1.26,0.86-2.07V51.73L116.48,51.73z M50.43,18.54 c-1.77,0-3.2-1.43-3.2-3.2c0-1.77,1.43-3.2,3.2-3.2h21.49c1.77,0,3.2,1.43,3.2,3.2c0,1.77-1.43,3.2-3.2,3.2H50.43L50.43,18.54z"/></g></svg>
+                    <p>New Appointment</p> 
+                </a>
+            </div>
+        </div>
+        
+        <div class="thankyou-new-appointment thankyou-close-appointment header-call-action d-none d-md-block desktop-top-right">
+            <div class="header-call-action-div">
+                <!-- add website url here -->
+                <a href="./">
+                    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 219.151 219.151" xml:space="preserve">
+                        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+                            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+                            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+                        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+                            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+                            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+                            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+                </svg>
+                    <p>Cancel Appointment</p> 
+                </a>
+            </div>
+        </div>
+  
+        
+   
+    <header>
+        <div class="header-outer">
+            <div class="header-outer-div">
+                <div class="header-logo">
+                    <a href="./">
+                        <img src="./images/Header-logo-transperant.png" class="img-fluid">      
+                    </a>
+                </div>
+                <div class="header-content">
+                    <div class="header-inner">
+                        <h1>Welcome to Shosmile Orthodontics</h1>    
+                        <p>Beverly Hills Office, Smile Health Orthodontics, Dr Deborah Solomon - 436 N Roxbury Dr Suite 203, Beverly Hills, CA 90210, USA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <section class="thankyou-div-outer">
+        <div class="container">
+            <div class="row">
+                <div class="thankyou-main-outer col-xl-10 mx-auto">
+                    <div class="thankyou-text-div">
+                        <div>
+                            <img src="./images/check.png">
+                        </div>
+                        <div>
+                            <h1>Thank You For Appointment Booking</h1>
+                            <p>Your Booking Id : AG-NI-5-10-2023</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="appointment-center">
+                        <div>
+                            <h2>Appointment Center :</h2>
+                            <h3>Shosmile Orthodontics</h3>
+                            <p>Beverly Hills Office, Smile Health Orthodontics, Dr Deborah Solomon - 436 N Roxbury Dr Suite 203, Beverly Hills, CA 90210, USA</p>
+                        </div>
+                    </div>
+                </div>    
+                <div class="your-details-outer col-xl-10 mx-auto">
+                    <div class="d-flex">
+                        <div>
+                            <h2>Your Details :</h2>
+                            <ul>
+                                <li><p><strong>Name</strong> : Sumit Patel</p></li>
+                                <li><p><strong>Email</strong> : Sumit@gocinico.com</p></li>
+                                <li><p><strong>DOB</strong> : 9/8/1990</p></li>
+                                <li><p><strong>Phone</strong> : 9898098980</p></li>
+                                <li><p><strong>Message</strong> : Sample Message</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="your-appointment-outer col-xl-10 mx-auto">
+                    <div class="d-flex your-appointment-innner">
+                        <div>
+                            <h2>Your Appointment Details :</h2>
+                            <h3>Your Appointment Booking For :</h3>
+                            <ul>
+                                <li><p><strong>Type</strong> : Child/ Teen</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex your-appointment-innner">
+                        <div>
+                            <h3>Your Appointment Booked Location :</h3>
+                            <ul>
+                                <li><p><strong>Clinic Name</strong> : Robertson Office Smile Health Orthodontics, Dr. Deborah Solomon @ Dr. Nik's  Children's Dentistry</p></li>
+                                <li><p><strong>Address</strong> : 1462 S Robertson Blvd, Los Angeles, CA 90035, USA</p></li>
+                                <li><p><strong>State</strong> : Los Angeles</p></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="d-flex your-appointment-innner">
+                        <div>
+                            <h3>Your Choose Category :</h3>
+                            <ul>
+                                <li><p><strong>Category Type</strong> : Consultations</p></li>
+                                <li><p><strong>Category Description</strong> : One to one consulting & medical history demonstration</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex your-appointment-innner">
+                        <div>
+                            <h3>Booked Slot Details :</h3>
+                            <ul>
+                                <li><p><strong>Book Now</strong> : 60 MIN / Paid</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="d-flex your-appointment-innner">
+                        <div>
+                            <h3>Appointment Date & Time :</h3>
+                            <ul>
+                                <li><p><strong>Your Booking Date is</strong> : 12/6/2023</p></li>
+                                <li><p><strong>Your Booking Time is</strong> : 9:15 AM</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="back-div-outer">
+                    <div>
+                        <p>Copyright © 2023 Shosmile Orthodontics. All rights reserved.</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="./images/facebook.png"></li>
+                            <li><img src="./images/twitter.png"></li>
+                            <li><img src="./images/youtube.png"></li>
+                            <li><img src="./images/instagram.png"></li>
+                            <li><img src="./images/linkedin.png "></li>
+                        </ul>
+                    </div>  
+                  
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-top-right thankyou-mobile thankyou-new-appointment header-call-action d-sm-block d-md-none">
+        <div class="header-call-action-div">
+            <a href="./">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 122.88" style="enable-background:new 0 0 122.88 122.88" xml:space="preserve"><g><path d="M81.61,4.73c0-2.61,2.58-4.73,5.77-4.73c3.19,0,5.77,2.12,5.77,4.73v20.72c0,2.61-2.58,4.73-5.77,4.73 c-3.19,0-5.77-2.12-5.77-4.73V4.73L81.61,4.73z M66.11,103.81c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9 c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,103.81z M15.85,67.09c-0.34,0-0.61-1.43-0.61-3.2 c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,67.09z M40.98,67.09 c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98 L40.98,67.09z M66.11,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9c0.34,0,0.61,1.43,0.61,3.2 c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,67.09z M91.25,67.09c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79 c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H91.25L91.25,67.09z M15.85,85.45c-0.34,0-0.61-1.43-0.61-3.2 c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,85.45z M40.98,85.45 c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98 L40.98,85.45z M66.11,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2H81.9c0.34,0,0.61,1.43,0.61,3.2 c0,1.77-0.27,3.2-0.61,3.2H66.11L66.11,85.45z M91.25,85.45c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79 c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H91.25L91.25,85.45z M15.85,103.81c-0.34,0-0.61-1.43-0.61-3.2 c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H15.85L15.85,103.81z M40.98,103.81 c-0.34,0-0.61-1.43-0.61-3.2c0-1.77,0.27-3.2,0.61-3.2h15.79c0.34,0,0.61,1.43,0.61,3.2c0,1.77-0.27,3.2-0.61,3.2H40.98 L40.98,103.81z M29.61,4.73c0-2.61,2.58-4.73,5.77-4.73s5.77,2.12,5.77,4.73v20.72c0,2.61-2.58,4.73-5.77,4.73 s-5.77-2.12-5.77-4.73V4.73L29.61,4.73z M6.4,45.32h110.07V21.47c0-0.8-0.33-1.53-0.86-2.07c-0.53-0.53-1.26-0.86-2.07-0.86H103 c-1.77,0-3.2-1.43-3.2-3.2c0-1.77,1.43-3.2,3.2-3.2h10.55c2.57,0,4.9,1.05,6.59,2.74c1.69,1.69,2.74,4.02,2.74,6.59v27.06v65.03 c0,2.57-1.05,4.9-2.74,6.59c-1.69,1.69-4.02,2.74-6.59,2.74H9.33c-2.57,0-4.9-1.05-6.59-2.74C1.05,118.45,0,116.12,0,113.55V48.52 V21.47c0-2.57,1.05-4.9,2.74-6.59c1.69-1.69,4.02-2.74,6.59-2.74H20.6c1.77,0,3.2,1.43,3.2,3.2c0,1.77-1.43,3.2-3.2,3.2H9.33 c-0.8,0-1.53,0.33-2.07,0.86c-0.53,0.53-0.86,1.26-0.86,2.07V45.32L6.4,45.32z M116.48,51.73H6.4v61.82c0,0.8,0.33,1.53,0.86,2.07 c0.53,0.53,1.26,0.86,2.07,0.86h104.22c0.8,0,1.53-0.33,2.07-0.86c0.53-0.53,0.86-1.26,0.86-2.07V51.73L116.48,51.73z M50.43,18.54 c-1.77,0-3.2-1.43-3.2-3.2c0-1.77,1.43-3.2,3.2-3.2h21.49c1.77,0,3.2,1.43,3.2,3.2c0,1.77-1.43,3.2-3.2,3.2H50.43L50.43,18.54z"/></g></svg>
+            </a>
+        </div>
+    </div>
+    
+    <div class="mobile-top-right thankyou-mobile thankyou-new-appointment thankyou-close-appointment header-call-action d-sm-block d-md-none">
+        <div class="header-call-action-div">
+            <!-- add website url here -->
+            <a href="./">
+                <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 219.151 219.151" xml:space="preserve">
+                        <path d="M109.576,219.151c60.419,0,109.573-49.156,109.573-109.576C219.149,49.156,169.995,0,109.576,0S0.002,49.156,0.002,109.575
+                            C0.002,169.995,49.157,219.151,109.576,219.151z M109.576,15c52.148,0,94.573,42.426,94.574,94.575
+                            c0,52.149-42.425,94.575-94.574,94.576c-52.148-0.001-94.573-42.427-94.573-94.577C15.003,57.427,57.428,15,109.576,15z"/>
+                        <path d="M94.861,156.507c2.929,2.928,7.678,2.927,10.606,0c2.93-2.93,2.93-7.678-0.001-10.608l-28.82-28.819l83.457-0.008
+                            c4.142-0.001,7.499-3.358,7.499-7.502c-0.001-4.142-3.358-7.498-7.5-7.498l-83.46,0.008l28.827-28.825
+                            c2.929-2.929,2.929-7.679,0-10.607c-1.465-1.464-3.384-2.197-5.304-2.197c-1.919,0-3.838,0.733-5.303,2.196l-41.629,41.628
+                            c-1.407,1.406-2.197,3.313-2.197,5.303c0.001,1.99,0.791,3.896,2.198,5.305L94.861,156.507z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/custom.js"></script>
+<script>
+$(".steps li:nth-child(1) .step__icon").removeClass('big-step');
+$(".steps li:nth-child(2) .step__icon").addClass('big-step');
+$(".steps li:nth-child(1)").addClass('step--complete');
+var Appointmentfor = sessionStorage.getItem('Appointmentfor');
+console.log(Appointmentfor);
+</script>
+</html>

@@ -1,0 +1,647 @@
+@import "variable.css";
+
+@media only screen and (min-width: 1400px) { 
+    .header-content {
+        margin-left: -150px;
+    }
+}
+
+@media only screen and (max-width: 1399px) { 
+    .appointment-category-selection .appointfor-location-content h3 {
+        font-size: 26px;
+        line-height: 36px;
+        min-height: 72px;
+    }
+    .appointfor-location-outer {
+        width: 45%;
+    }
+    #days p {
+        width: 61px;
+    }
+    .month {
+        width: 61px;
+        height: 50px;
+        transition: 0.4s;
+    }
+}
+
+@media only screen and (max-width: 1199px) { 
+    .book-now-left {
+        width: 60%;
+    }
+    .appointment-category-selection .appointfor-location-content h3 {
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        min-height: 50px;
+    }
+    .book-your-slot .appointfor-location-content h3 {
+        min-height: auto;
+    }
+    .header-content {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .book-now-left {
+        width: 70%;
+    }
+    .appointfor-location-outer {
+        width: 100%;
+    }
+    .header-content {
+        padding: 10px;
+    }
+    .choose-slot-booking {
+        margin-top: 20px;
+    }
+    #days p {
+        width: 66px;
+    }
+    .month {
+        width: 67px;
+        height: 50px;
+        transition: 0.4s;
+    }
+
+    .book-now {
+        background-color: var(--primary);
+        padding: 15px;
+        text-align: center;
+        width: 140px;
+    }
+    .book-now-div {
+        display: flex;
+        justify-content: end;
+    }
+    .book-your-slot .appointfor-location-content h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+        min-height: 0px;
+    }
+    .back-div-outer {
+        flex-flow: column wrap;
+    }
+    .back-div-outer ul {
+        margin-top: 12px;
+    }
+    header img {
+        margin-bottom: 30px;
+    }
+    .header-outer-div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .header-inner {
+        padding: 30px;
+    }
+}
+@media (min-width:768px) and (max-width:991px) {
+    #days p {
+        width: 13%;
+    }
+    #calender-content {
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    .month {
+        width: 12%;
+        height: 50px;
+        transition: 0.4s;
+    }
+}
+@media only screen and (max-width: 767px) {
+    header img {
+        width: var(--mobile-logo-width);
+    }
+    .book-your-slot .appointfor-location-div {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    .location-appointment .appointfor-location-content span {
+        font-size: 15px;
+        display: block;
+        line-height: 19px;
+    }
+    .location-appointment .appointfor-mobile-address p {
+        font-size: 15px;
+        font-family: var(--bold-font);
+        line-height: 20px;
+    }
+    .location-appointment .appointfor-location-content p {
+        margin-bottom: 0px;
+    }
+    .location-appointment .appointfor-mobile-address {
+        position: relative;
+        margin-top: 25px;
+    }
+    .location-appointment .appointfor-mobile-address::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
+        position: absolute;
+        top: -13px;
+
+    }
+    .location-appointment .appointfor-location-icon h3 {
+        margin-top: 0;
+        text-align: left;
+    }
+    .location-appointment .appointment-area-location {
+        display: flex;
+        align-items: center;
+        gap: 0px;
+    }
+    .location-appointment .appointfor-location-icon img {
+        width: 30px;
+        height: 30px;
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .location-appointment .appointfor-location-icon {
+        width: 600px;
+    }
+    .book-now-outer-div {
+        gap: 20px;
+    }
+    .next-icon {
+        top: 42%;
+    }
+    .book-your-slot .appointfor-location-content p {
+        margin-top: 12px;
+    }
+    .book-your-slot .appointfor-location-icon h3 {
+        text-align: left;
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 22px;
+        margin-left: 15px;
+    }
+    .book-your-slot .appointfor-location-icon {
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    .book-your-slot .appointfor-location-content {
+        width: auto;
+        margin-left: 0px;
+    }
+    /* .appointfor-location-div {
+        flex-direction: column;
+    } */
+    .thankyou-div-outer {
+        margin-top: 30px;
+    }
+    .thankyou-mobile.thankyou-new-appointment {
+        top: 20px;
+    }
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-top-right {
+        right: 0;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-top-right {
+        right: 0;
+    }
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-top-left {
+        left: 0;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-top-left {
+        left: 0;
+    }
+
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-bottom-left {
+        left: 0;
+        bottom: 60px;
+        top: auto;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-bottom-left {
+        left: 0;
+        bottom: 10px;
+        top: auto;
+    }
+
+    .thankyou-mobile.thankyou-new-appointment.mobile-bottom-right {
+        right: 0;
+        bottom: 60px;
+        top: auto;
+    }
+    .thankyou-mobile.thankyou-close-appointment.mobile-bottom-right {
+        right: 0;
+        bottom: 10px;
+        top: auto;
+    }
+
+    .thankyou-mobile.thankyou-close-appointment {
+        top: 70px;
+    }
+    .thankyou-mobile.thankyou-new-appointment {
+        left: 10px;
+        right: auto;
+        width: auto;
+    }
+    .thankyou-mobile.thankyou-new-appointment .header-call-action-div {
+        margin-right:0px
+    }
+    .appointment-center h2,
+    .your-appointment-outer h2,
+    .your-details-outer h2{
+        font-size: 26px;
+    }
+    .thankyou-text-div p {
+        padding: 15px;
+    }
+    .thankyou-text-div h1 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .book-now {
+        margin-left: 20px;
+    }
+
+    .appointment-for .appointfor-location-outer {
+        width: 100%;
+    }
+    #calender-title p {
+        font-size: 18px;
+    }
+    .choose-date-content p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .choose-date-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    /* .book-your-slot .appointfor-location-div {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 60%;
+        position: relative;
+    } */
+    /* .book-your-slot .appointfor-location {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+
+    .book-your-slot .appointfor-location-content::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 4px;
+    }
+    /* .book-your-slot .appointfor-location-content {
+        width: auto;
+        margin-left: 0;
+        padding-top: 15px;
+    } */
+
+    .appointfor-location-content::before {
+        left: -30px;
+    }
+    footer p {
+        text-align: center;
+    }
+    footer {
+        margin-top: 3rem;
+    }
+    .header-outer {
+        margin-top: 2rem;
+    }
+    .progress-div {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .header-inner h1 {
+        font-size: 28px;
+        line-height: 60px;
+    }
+    .header-inner p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .mobile-top-right {
+        right: 0;
+        top: 10px;
+        margin-right: 10px;
+    }
+    .mobile-bottom-right {
+        right: 0;
+        bottom: 10px;
+        margin-right: 10px;
+    }
+    .mobile-top-left {
+        left: 0;
+        top: 10px;
+        margin-left: 10px;
+    }
+    .mobile-bottom-left {
+        left: 0;
+        bottom: 10px;
+        margin-left: 10px;
+    }
+    .mobile-header-call-action {
+        position: fixed;
+        /* top: 25px;
+        left: 8px; */
+    }
+    .mobile-header-call-action-div {
+        width: 37px;
+        background-color: var(--primary);
+        height: 37px;
+        border-radius: 50px;
+        float: left;
+        transition: width 1s;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .mobile-header-call-action img {
+        margin-top: 0;
+        margin-right: 0px;
+        transition: transform .7s ease-in-out;
+        width: 35px;
+    }
+} 
+@media only screen and (max-width: 576px) {
+    .book-your-slot-outer {
+        margin-bottom: 30px;
+    }
+    .appointment-center {
+        display: flex;
+        margin-top: 0px;
+    }
+    .appointment-for h2,
+    .appointment-category-selection h2,
+    .book-your-slot h2 {
+        font-size: 22px;
+    }
+    .thankyou-text-div img {
+        width: 25px;
+    }
+    .your-details-outer ul li p {
+        font-size: 16px;
+        font-family: var(--Regular-font);
+    }
+    .your-appointment-outer ul li p {
+        font-size: 16px;
+        font-family: var(--Regular-font);
+    }
+    .your-appointment-innner:not(:first-child) {
+        margin-top: 20px;
+    } 
+    .your-details-outer {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .appointment-center h2,
+    .your-appointment-outer h2,
+    .your-details-outer h2 {
+        font-size: 22px;
+    }
+    .thankyou-text-div p {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .thankyou-text-div h1 {
+        font-size: 16px;
+        line-height: 15px;
+    }
+    .thankyou-main-outer,
+    .your-details-outer,
+    .your-appointment-outer {
+        padding: 15px;
+    }
+    /* .thankyou-text-div {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+    .appointment-category-selection .appointfor-location-content h3 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .appointfor-location-outer-main {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .appointfor-location-outer-location {
+        gap: 30px;
+    }
+    .appointment-outer-div {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .appointfor-location-icon {
+        width: 400px;
+    }
+    .appointment-category-selection .appointfor-location-icon {
+        width: 150px;
+    }
+    .appointfor-location-content::before {
+        width: 2px;
+    }
+    .appointfor-location-icon h3 {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .book-your-slot .appointfor-location-content {
+        margin-left: 0px;
+    }
+    .booking-date-time-form {
+        margin-top: 20px;
+    }
+    .booking-time-outer {
+        gap: 2px;
+    }
+    .booking-date-time-div {
+        margin-top: 30px;
+    }
+    .booking-date {
+        font-size: 56px;
+        line-height: 45px;
+    }
+    .booking-month {
+        font-size: 15px;
+    }
+    .booking-year {
+        font-size: 15px;
+    }
+    .booking-time-outer h3 {
+        font-size: 22px;
+    }
+    .booking-time-outer h4 {
+        font-size: 22px;
+    }
+    .month-selector {
+        width: 42px;
+        height: 42px;
+    }
+    .clickable:hover {
+        height: 40px;
+        width: 40px;
+    }
+    .month {
+        width: 14%;
+        height: 44px;
+        transition: 0.4s;
+    }
+    #days p {
+        width: 13%;
+    }
+    #calender-content {
+        width: 100%;
+    }
+    .book-your-slot .appointfor-location-icon {
+        width: auto;
+        text-align: center;
+    }
+    .appointment-category-selection .appointfor-location-content p {
+        min-height: auto;
+        font-size: 15px;
+    line-height: 19px;
+    }
+    .appointment-category-selection .appointfor-location-content h3 {
+        min-height: auto;
+    }
+    .appointfor-location-content span {
+        font-size: 15px;
+    }
+    .appointfor-location-content p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+    .appointfor-location {
+        padding: 20px;
+    }
+    /* .appointfor-location-content::before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary);
+        position: absolute;
+        text-align: center;
+        left: 0px !important;
+        right: 0;
+        top: 0;
+    } */
+    /* .appointfor-location-content {
+        width: auto;
+        margin-left: 0px;
+        position: relative;
+        padding-top: 15px;
+    } */
+    /* .appointfor-location-icon {
+        width: auto;
+        margin-bottom: 15px;
+    } */
+
+    /* .appointfor-location-div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } */
+    /* .appointment-category-selection .appointfor-location-div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    } */
+    .appointment-category-selection .appointfor-location-content {
+        width: 100%;
+    }
+    .big-step {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .steps {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .appointment-inner {
+        width: 170px;
+    }
+    .header-inner {
+        padding: 20px;
+    }
+    .header-inner h1 {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) { 
+    .next-icon img {
+        width: 22px;
+    }
+    .book-your-slot .appointfor-location-content p {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 0;
+        min-height: 0;
+    }
+    .book-your-slot .appointfor-location-icon h3 {
+        font-size: 13px;
+        line-height: 17px;
+        margin-left: 7px;
+    }
+    .book-your-slot .appointfor-location-content h3 {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    min-height: 0px;
+    }
+    .book-your-slot .appointfor-location-div {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    .book-your-slot .book-now h3 {
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .book-now h4 {
+        font-size: 12px;
+    }
+    .book-your-slot .appointfor-location {
+        padding: 10px;
+        padding-right: 10%;
+    }
+    .book-your-slot .appointfor-location-icon img {
+        float: left;
+        width: 40px;
+        height: 40px;
+    }
+    .book-now {
+        margin-left: 5px;
+        padding: 5px;
+        width: 110px;
+    }
+    .book-now h3::after {
+        width: 80%;
+    }
+    .next-icon {
+        top: 37%;
+        right: -12px;
+    }
+}

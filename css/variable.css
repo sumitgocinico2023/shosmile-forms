@@ -1,0 +1,16 @@
+
+:root {
+    /*  Color Code  */
+    --primary: #FDDA44;
+    --secondary: #000000;
+    --whitesmoke: #f5f5f5;
+    --white-color: #ffffff;
+    --silver-color: #BFBFBF;
+    --cyna-blue-color: #e6e7e8;
+    --border-color: #F2C94C;
+    --bold-font: "Nunito Bold";
+    --Regular-font: "Nunito Regular";
+    --desktop-logo-width: 200px;
+    --mobile-logo-width: 130px;
+
+}
